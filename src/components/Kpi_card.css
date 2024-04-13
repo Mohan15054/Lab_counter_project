@@ -3,10 +3,25 @@
 .kpi-card-container {
   display: flex;
   flex-direction: row;
-  align-items: flex-start;
+  align-items: center;
+  border:1px solid black;
+  height: 100px;
   gap: 20px;
-  box-shadow: black;
+  padding: 10px;
+  background-color: white;
   
+}
+.label-text{
+-webkit-text-fill-color: white;
+font-weight: 600;
+}
+.kpi-card{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr; /* Two columns with equal width */
+  padding:10px;
+  gap: 20px;
+
+
 }
 
 .kpi-item {
@@ -23,8 +38,9 @@
 
 .date-picker-container {
   display: flex;
-  flex-direction: column;
-  align-items: flex-start;
+  align-items: center;
+  gap: 16px;
+  justify-content: flex-end;
 }
 
 .date-picker-container label {
@@ -38,7 +54,29 @@
   width: 200px;
   font-size: 14px;
 }
+.datepicker_child{
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+.btnstyle{
+  width: 50px;
+  text-align: center;
+ background-color: blue;
+ -webkit-text-fill-color:white;
+ padding: 4px;
+ 
 
+
+}
+.btnParentReset{
+  display: flex;
+  justify-content: end;
+  padding: 34px 8px 8px 8px;
+}
+.btnParent{
+ padding: 34px 8px 8px 8px;
+}
 /* Adjust styles for smaller screens */
 @media screen and (max-width: 768px) {
   .kpi-card-container {
@@ -49,3 +87,4 @@
     width: 100%;
   }
 }
+
