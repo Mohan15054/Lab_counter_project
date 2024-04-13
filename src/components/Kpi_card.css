@@ -1,0 +1,51 @@
+/* Kpi_card.css */
+
+.kpi-card-container {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  gap: 20px;
+  box-shadow: black;
+  
+}
+
+.kpi-item {
+  background-color: #f0f0f0;
+  padding: 20px;
+  border-radius: 8px;
+}
+
+.kpi-card-container_new {
+  background-color: #f0f0f0;
+  padding: 20px;
+  border-radius: 8px;
+}
+
+.date-picker-container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.date-picker-container label {
+  margin-bottom: 5px;
+}
+
+.date-picker-container input[type="datetime-local"] {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  width: 200px;
+  font-size: 14px;
+}
+
+/* Adjust styles for smaller screens */
+@media screen and (max-width: 768px) {
+  .kpi-card-container {
+    align-items: center;
+  }
+
+  .date-picker-container input[type="datetime-local"] {
+    width: 100%;
+  }
+}
