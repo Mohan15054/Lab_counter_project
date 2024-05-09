@@ -19,7 +19,7 @@ const KpiCard = () => {
       body: JSON.stringify({
         query: `
             query MyQuery($startTime: timestamptz!, $endTime: timestamptz!) @cached {
-              forward_count: counter_count_aggregate(
+              forward_count: myschema_count_aggregate(
                 where: {
                   direction: { _eq: "forward" }
                   time: { _gt: $startTime, _lt: $endTime }
@@ -30,7 +30,7 @@ const KpiCard = () => {
                 }
               }
               
-              reverse_count: counter_count_aggregate(
+              reverse_count: myschema_count_aggregate(
                 where: {
                   direction: { _eq: "reverse" }
                   time: { _gt: $startTime, _lt: $endTime }
